@@ -1,351 +1,430 @@
-// --- State Management ---
-const boardDataCache = {
-  IAI: null,
-  IFOA: null
-};
+let allPapers = [];
+let currentBoard = "IAI";
+let currentSubject = "";
+let currentYear = "";
+let currentMonth = "";
 
-const BOARD_FILE_MAP = {
-  IAI: './iai_papers.json',
-  IFOA: './ifoa_papers.json'
-};
+// State
+let currentLayout = "split";
+let blindSolveActive = true;
 
-let activeBoard = 'IAI';
-let activeSubject = null;
-let activeYear = null;
-let activeMonth = null;
+const MONTH_ORDER = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-// --- Elements ---
-const leftFrame = document.getElementById('leftFrame');
-const rightFrame = document.getElementById('rightFrame');
-const leftEmptyNotice = document.getElementById('leftEmptyNotice');
-const rightEmptyNotice = document.getElementById('rightEmptyNotice');
+// DOM Elements
+const qpFrame = document.getElementById("qpFrame");
+const solFrame = document.getElementById("solFrame");
+const qpEmpty = document.getElementById("qpEmpty");
+const solEmpty = document.getElementById("solEmpty");
+const paneQP = document.getElementById("paneQP");
+const paneSOL = document.getElementById("paneSOL");
+const centerDivider = document.getElementById("centerDivider");
 
-const dockBoardLabel = document.getElementById('dockBoardLabel');
-const dockSubjectLabel = document.getElementById('dockSubjectLabel');
-const dockYearLabel = document.getElementById('dockYearLabel');
-const dockMonthLabel = document.getElementById('dockMonthLabel');
+const btnIAI = document.getElementById("btnIAI");
+const btnIFOA = document.getElementById("btnIFOA");
+const subjectDropdown = document.getElementById("subjectDropdown");
+const dropdownTrigger = document.getElementById("dropdownTrigger");
+const selectedSubjectSpan = document.getElementById("selectedSubject");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const progressText = document.getElementById("progressText");
+const sessionBar = document.getElementById("sessionBar");
 
-const boardToggleBtn = document.getElementById('boardToggleBtn');
-const subjectToggleBtn = document.getElementById('subjectToggleBtn');
-const yearToggleBtn = document.getElementById('yearToggleBtn');
-const monthToggleBtn = document.getElementById('monthToggleBtn');
+// Blind Solve
+const blindMask = document.getElementById("blindMask");
+const btnToggleBlind = document.getElementById("btnToggleBlind");
+const btnRevealSolution = document.getElementById("btnRevealSolution");
 
-const boardPopover = document.getElementById('boardPopover');
-const subjectPopover = document.getElementById('subjectPopover');
-const yearPopover = document.getElementById('yearPopover');
-const monthPopover = document.getElementById('monthPopover');
+// Drawer Elements
+const notesDrawer = document.getElementById("notesDrawer");
+const btnToggleNotes = document.getElementById("btnToggleNotes");
+const btnCloseNotes = document.getElementById("btnCloseNotes");
+const sessionNotes = document.getElementById("sessionNotes");
+const notesTitle = document.getElementById("notesTitle");
 
-const movableDock = document.getElementById('movableDock');
-const dragGrip = document.getElementById('dragGrip');
+// Viewport Tools
+const btnPopoutQP = document.getElementById("btnPopoutQP");
+const btnDownloadQP = document.getElementById("btnDownloadQP");
+const btnPopoutSOL = document.getElementById("btnPopoutSOL");
+const btnDownloadSOL = document.getElementById("btnDownloadSOL");
 
-// --- Initialization ---
-document.addEventListener('DOMContentLoaded', async () => {
-  setupEventListeners();
-  setupDraggableDock();
-  await loadBoardData(activeBoard);
+// Initialize Application
+async function init() {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  }
+
+  try {
+    const res = await fetch("./iai_papers.json");
+    if (res.ok) {
+      allPapers = await res.json();
+    }
+  } catch (err) {
+    console.error("Could not load iai_papers.json:", err);
+  }
+
+  sessionBar.addEventListener("wheel", (e) => {
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      sessionBar.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+
+  populateSubjects();
+  setupKeyboardEngine();
+  setupDrawersAndTools();
+}
+
+// Subject Dropdown
+dropdownTrigger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdownMenu.classList.toggle("open");
 });
 
-// --- Dynamic Data Fetching ---
-async function loadBoardData(board) {
-  if (boardDataCache[board]) {
-    initializeState();
-    return;
+document.addEventListener("click", (e) => {
+  if (!subjectDropdown.contains(e.target)) {
+    dropdownMenu.classList.remove("open");
   }
+});
 
-  const filePath = BOARD_FILE_MAP[board];
-  try {
-    const res = await fetch(filePath);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    boardDataCache[board] = await res.json();
-  } catch (err) {
-    console.error(`Error loading ${board} papers:`, err);
-    boardDataCache[board] = [];
-  }
+function populateSubjects() {
+  const boardPapers = allPapers.filter(p => p.board === currentBoard);
+  const subjects = [...new Set(boardPapers.map(p => p.subjectCode))].sort();
 
-  initializeState();
-}
+  dropdownMenu.innerHTML = "";
 
-function initializeState() {
-  const subjects = getSubjects();
-  if (subjects.length > 0) {
-    activeSubject = subjects[0];
-    const years = getYears();
-    activeYear = years.length > 0 ? years[0] : null;
-    const months = getMonths();
-    activeMonth = months.length > 0 ? months[0] : null;
-  } else {
-    activeSubject = null;
-    activeYear = null;
-    activeMonth = null;
-  }
+  subjects.forEach(sub => {
+    const item = document.createElement("div");
+    item.className = `dropdown-item ${sub === currentSubject ? "active" : ""}`;
+    item.textContent = sub;
 
-  updateLabels();
-  loadActivePaper();
-}
+    item.addEventListener("click", () => {
+      currentSubject = sub;
+      selectedSubjectSpan.textContent = sub;
+      currentYear = "";
+      currentMonth = "";
+      dropdownMenu.classList.remove("open");
 
-// --- Data Queries ---
-function getCurrentData() {
-  return boardDataCache[activeBoard] || [];
-}
+      document.querySelectorAll(".dropdown-item").forEach(el => el.classList.remove("active"));
+      item.classList.add("active");
 
-function getSubjects() {
-  const subjects = getCurrentData().map((p) => p.subjectCode);
-  return [...new Set(subjects)];
-}
-
-function getYears() {
-  const papers = getCurrentData().filter(
-    (p) => p.subjectCode.toUpperCase() === (activeSubject || '').toUpperCase()
-  );
-  const years = papers.map((p) => String(p.year));
-  return [...new Set(years)].sort((a, b) => Number(b) - Number(a));
-}
-
-function getMonths() {
-  const papers = getCurrentData().filter(
-    (p) =>
-      p.subjectCode.toUpperCase() === (activeSubject || '').toUpperCase() &&
-      String(p.year) === String(activeYear || '')
-  );
-  const months = papers.map((p) => p.month);
-  return [...new Set(months)];
-}
-
-// --- UI Label Updating ---
-function updateLabels() {
-  dockBoardLabel.textContent = activeBoard;
-  dockSubjectLabel.textContent = activeSubject || 'SUB';
-  dockYearLabel.textContent = activeYear || 'YEAR';
-  dockMonthLabel.textContent = activeMonth || 'MONTH';
-}
-
-// --- Document Viewer Rendering ---
-function loadActivePaper() {
-  if (!activeSubject || !activeYear || !activeMonth) {
-    resetViewer();
-    return;
-  }
-
-  const paper = getCurrentData().find(
-    (p) =>
-      p.subjectCode.toUpperCase() === activeSubject.toUpperCase() &&
-      String(p.year) === String(activeYear) &&
-      p.month.toLowerCase() === activeMonth.toLowerCase()
-  );
-
-  if (!paper) {
-    resetViewer();
-    return;
-  }
-
-  // Load Solution (Left)
-  if (paper.solutionUrl) {
-    leftFrame.src = paper.solutionUrl;
-    leftFrame.style.display = 'block';
-    leftEmptyNotice.style.display = 'none';
-  } else {
-    resetLeftPane();
-  }
-
-  // Load Question (Right)
-  if (paper.questionUrl) {
-    rightFrame.src = paper.questionUrl;
-    rightFrame.style.display = 'block';
-    rightEmptyNotice.style.display = 'none';
-  } else {
-    resetRightPane();
-  }
-}
-
-function resetLeftPane() {
-  leftFrame.removeAttribute('src');
-  leftFrame.style.display = 'none';
-  leftEmptyNotice.style.display = 'flex';
-}
-
-function resetRightPane() {
-  rightFrame.removeAttribute('src');
-  rightFrame.style.display = 'none';
-  rightEmptyNotice.style.display = 'flex';
-}
-
-function resetViewer() {
-  resetLeftPane();
-  resetRightPane();
-}
-
-// --- Popover Renderers ---
-function renderSubjectPopover() {
-  subjectPopover.innerHTML = '';
-  const subjects = getSubjects();
-
-  if (subjects.length === 0) {
-    subjectPopover.innerHTML = '<div class="dock-popover-item">None</div>';
-    return;
-  }
-
-  subjects.forEach((subj) => {
-    const item = document.createElement('div');
-    item.className = 'dock-popover-item';
-    if (activeSubject === subj) item.classList.add('active');
-    item.textContent = subj;
-    item.onclick = (e) => {
-      e.stopPropagation();
-      activeSubject = subj;
-      const years = getYears();
-      activeYear = years.length > 0 ? years[0] : null;
-      const months = getMonths();
-      activeMonth = months.length > 0 ? months[0] : null;
-      updateLabels();
-      loadActivePaper();
-      closeAllPopovers();
-    };
-    subjectPopover.appendChild(item);
-  });
-}
-
-function renderYearPopover() {
-  yearPopover.innerHTML = '';
-  const years = getYears();
-
-  if (years.length === 0) {
-    yearPopover.innerHTML = '<div class="dock-popover-item">None</div>';
-    return;
-  }
-
-  years.forEach((yr) => {
-    const item = document.createElement('div');
-    item.className = 'dock-popover-item';
-    if (String(activeYear) === String(yr)) item.classList.add('active');
-    item.textContent = yr;
-    item.onclick = (e) => {
-      e.stopPropagation();
-      activeYear = yr;
-      const months = getMonths();
-      activeMonth = months.includes(activeMonth) ? activeMonth : months[0];
-      updateLabels();
-      loadActivePaper();
-      closeAllPopovers();
-    };
-    yearPopover.appendChild(item);
-  });
-}
-
-function renderMonthPopover() {
-  monthPopover.innerHTML = '';
-  const months = getMonths();
-
-  if (months.length === 0) {
-    monthPopover.innerHTML = '<div class="dock-popover-item">None</div>';
-    return;
-  }
-
-  months.forEach((m) => {
-    const item = document.createElement('div');
-    item.className = 'dock-popover-item';
-    if (activeMonth && activeMonth.toLowerCase() === m.toLowerCase()) {
-      item.classList.add('active');
-    }
-    item.textContent = m;
-    item.onclick = (e) => {
-      e.stopPropagation();
-      activeMonth = m;
-      updateLabels();
-      loadActivePaper();
-      closeAllPopovers();
-    };
-    monthPopover.appendChild(item);
-  });
-}
-
-// --- Popover Visibility Controls ---
-function closeAllPopovers() {
-  boardPopover.classList.remove('show');
-  subjectPopover.classList.remove('show');
-  yearPopover.classList.remove('show');
-  monthPopover.classList.remove('show');
-}
-
-function togglePopover(popover, renderFn) {
-  const isAlreadyOpen = popover.classList.contains('show');
-  closeAllPopovers();
-  if (!isAlreadyOpen) {
-    if (renderFn) renderFn();
-    popover.classList.add('show');
-  }
-}
-
-// --- Event Listeners Setup ---
-function setupEventListeners() {
-  boardToggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    togglePopover(boardPopover);
-  });
-
-  boardPopover.querySelectorAll('.dock-popover-item').forEach((item) => {
-    item.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      const board = item.getAttribute('data-board');
-      if (activeBoard !== board) {
-        activeBoard = board;
-        boardPopover.querySelectorAll('.dock-popover-item').forEach((el) => {
-          el.classList.toggle('active', el.getAttribute('data-board') === board);
-        });
-        await loadBoardData(board);
-      }
-      closeAllPopovers();
+      renderSessionBar();
     });
+
+    dropdownMenu.appendChild(item);
   });
 
-  subjectToggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    togglePopover(subjectPopover, renderSubjectPopover);
-  });
-
-  yearToggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    togglePopover(yearPopover, renderYearPopover);
-  });
-
-  monthToggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    togglePopover(monthPopover, renderMonthPopover);
-  });
-
-  window.addEventListener('click', closeAllPopovers);
-}
-
-// --- Draggable Dock Support ---
-function setupDraggableDock() {
-  let isDragging = false;
-  let offsetX = 0;
-  let offsetY = 0;
-
-  dragGrip.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - movableDock.getBoundingClientRect().left;
-    offsetY = e.clientY - movableDock.getBoundingClientRect().top;
-
-    movableDock.style.bottom = 'auto';
-    movableDock.style.right = 'auto';
-    movableDock.style.transform = 'none';
-
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  });
-
-  function onMouseMove(e) {
-    if (!isDragging) return;
-    const x = e.clientX - offsetX;
-    const y = e.clientY - offsetY;
-
-    movableDock.style.left = `${Math.max(10, Math.min(window.innerWidth - movableDock.offsetWidth - 10, x))}px`;
-    movableDock.style.top = `${Math.max(10, Math.min(window.innerHeight - movableDock.offsetHeight - 10, y))}px`;
-  }
-
-  function onMouseUp() {
-    isDragging = false;
-    document.removeEventListener('mousemove', onMouseMove);
-    document.removeEventListener('mouseup', onMouseUp);
+  if (subjects.length > 0) {
+    if (!subjects.includes(currentSubject)) {
+      currentSubject = subjects[0];
+    }
+    selectedSubjectSpan.textContent = currentSubject;
+    renderSessionBar();
+  } else {
+    currentSubject = "";
+    selectedSubjectSpan.textContent = "—";
+    sessionBar.innerHTML = "";
+    clearViewports();
   }
 }
+
+// Conquered Papers Tracker Logic
+function getConqueredStorageKey() {
+  return `conquered_${currentBoard}_${currentSubject}`;
+}
+
+function getConqueredList() {
+  const data = localStorage.getItem(getConqueredStorageKey());
+  return data ? JSON.parse(data) : [];
+}
+
+function togglePaperConquered(year, month) {
+  const key = `${year}_${month}`;
+  let list = getConqueredList();
+  if (list.includes(key)) {
+    list = list.filter(k => k !== key);
+  } else {
+    list.push(key);
+  }
+  localStorage.setItem(getConqueredStorageKey(), JSON.stringify(list));
+  updateProgressBadge();
+}
+
+function updateProgressBadge() {
+  const papers = allPapers.filter(p => p.board === currentBoard && p.subjectCode === currentSubject);
+  const total = papers.length;
+  const list = getConqueredList();
+  const solved = list.length;
+  const pct = total > 0 ? Math.round((solved / total) * 100) : 0;
+  progressText.textContent = `${solved} / ${total} Solved (${pct}%)`;
+}
+
+function renderSessionBar() {
+  sessionBar.innerHTML = "";
+
+  const papers = allPapers.filter(
+    p => p.board === currentBoard && p.subjectCode === currentSubject
+  );
+
+  const groups = {};
+  papers.forEach(p => {
+    if (!groups[p.year]) groups[p.year] = new Set();
+    groups[p.year].add(p.month);
+  });
+
+  const sortedYears = Object.keys(groups).sort((a, b) => b - a);
+
+  if (sortedYears.length > 0) {
+    if (!currentYear || !groups[currentYear]) {
+      currentYear = sortedYears[0];
+      const sortedMonths = Array.from(groups[currentYear]).sort(
+        (a, b) => MONTH_ORDER.indexOf(b) - MONTH_ORDER.indexOf(a)
+      );
+      currentMonth = sortedMonths[0];
+    }
+  }
+
+  const conqueredList = getConqueredList();
+
+  sortedYears.forEach(year => {
+    const groupEl = document.createElement("div");
+    groupEl.className = "year-month-group";
+
+    const label = document.createElement("span");
+    label.className = "group-year-label";
+    label.textContent = year;
+    groupEl.appendChild(label);
+
+    const months = Array.from(groups[year]).sort(
+      (a, b) => MONTH_ORDER.indexOf(a) - MONTH_ORDER.indexOf(b)
+    );
+
+    months.forEach(month => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "month-chip";
+      chip.textContent = month;
+
+      const isConquered = conqueredList.includes(`${year}_${month}`);
+      if (isConquered) {
+        chip.classList.add("conquered");
+      }
+
+      if (String(currentYear) === String(year) && currentMonth.toLowerCase() === month.toLowerCase()) {
+        chip.classList.add("active");
+      }
+
+      chip.addEventListener("click", () => {
+        currentYear = year;
+        currentMonth = month;
+        renderSessionBar();
+        loadViewer();
+        chip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      });
+
+      // Double-click or right-click to mark as solved/conquered
+      chip.addEventListener("dblclick", (e) => {
+        e.preventDefault();
+        togglePaperConquered(year, month);
+        renderSessionBar();
+      });
+      chip.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        togglePaperConquered(year, month);
+        renderSessionBar();
+      });
+
+      groupEl.appendChild(chip);
+    });
+
+    sessionBar.appendChild(groupEl);
+  });
+
+  updateProgressBadge();
+  loadViewer();
+  loadSavedNotes();
+}
+
+function getCurrentPaper() {
+  return allPapers.find(
+    p => p.board === currentBoard &&
+         p.subjectCode === currentSubject &&
+         String(p.year) === String(currentYear) &&
+         p.month.toLowerCase() === currentMonth.toLowerCase()
+  );
+}
+
+function loadViewer() {
+  const paper = getCurrentPaper();
+
+  blindSolveActive = true;
+  blindMask.classList.remove("hidden");
+  btnToggleBlind.textContent = "👁 Reveal";
+
+  if (paper && paper.questionUrl) {
+    qpFrame.src = `${paper.questionUrl}#toolbar=0&navpanes=0`;
+    qpEmpty.style.display = "none";
+  } else {
+    qpFrame.src = "";
+    qpEmpty.style.display = "flex";
+  }
+
+  if (paper && paper.solutionUrl) {
+    solFrame.src = `${paper.solutionUrl}#toolbar=0&navpanes=0`;
+    solEmpty.style.display = "none";
+  } else {
+    solFrame.src = "";
+    solEmpty.style.display = "flex";
+  }
+}
+
+function clearViewports() {
+  qpFrame.src = "";
+  solFrame.src = "";
+  qpEmpty.style.display = "flex";
+  solEmpty.style.display = "flex";
+}
+
+// Drawers & Study Utilities
+function setupDrawersAndTools() {
+  btnRevealSolution.addEventListener("click", () => {
+    blindSolveActive = false;
+    blindMask.classList.add("hidden");
+    btnToggleBlind.textContent = "🔒 Hide";
+  });
+
+  btnToggleBlind.addEventListener("click", () => {
+    blindSolveActive = !blindSolveActive;
+    if (blindSolveActive) {
+      blindMask.classList.remove("hidden");
+      btnToggleBlind.textContent = "👁 Reveal";
+    } else {
+      blindMask.classList.add("hidden");
+      btnToggleBlind.textContent = "🔒 Hide";
+    }
+  });
+
+  btnToggleNotes.addEventListener("click", () => {
+    notesDrawer.classList.toggle("hidden-drawer");
+    if (!notesDrawer.classList.contains("hidden-drawer")) {
+      sessionNotes.focus();
+    }
+  });
+  btnCloseNotes.addEventListener("click", () => notesDrawer.classList.add("hidden-drawer"));
+
+  sessionNotes.addEventListener("input", () => {
+    const key = `notes_${currentBoard}_${currentSubject}_${currentYear}_${currentMonth}`;
+    localStorage.setItem(key, sessionNotes.value);
+  });
+
+  function downloadFile(url, filename) {
+    if (!url) return;
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  btnPopoutQP.addEventListener("click", () => {
+    const p = getCurrentPaper();
+    if (p && p.questionUrl) window.open(p.questionUrl, "_blank");
+  });
+
+  btnDownloadQP.addEventListener("click", () => {
+    const p = getCurrentPaper();
+    if (p && p.questionUrl) {
+      downloadFile(p.questionUrl, `${currentBoard}_${currentSubject}_${currentYear}_${currentMonth}_QP.pdf`);
+    }
+  });
+
+  btnPopoutSOL.addEventListener("click", () => {
+    const p = getCurrentPaper();
+    if (p && p.solutionUrl) window.open(p.solutionUrl, "_blank");
+  });
+
+  btnDownloadSOL.addEventListener("click", () => {
+    const p = getCurrentPaper();
+    if (p && p.solutionUrl) {
+      downloadFile(p.solutionUrl, `${currentBoard}_${currentSubject}_${currentYear}_${currentMonth}_SOL.pdf`);
+    }
+  });
+}
+
+function loadSavedNotes() {
+  notesTitle.textContent = `${currentSubject} ${currentMonth} ${currentYear} Notes`;
+  const key = `notes_${currentBoard}_${currentSubject}_${currentYear}_${currentMonth}`;
+  sessionNotes.value = localStorage.getItem(key) || "";
+}
+
+// Keyboard Shortcuts Engine
+function setupKeyboardEngine() {
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      notesDrawer.classList.add("hidden-drawer");
+      return;
+    }
+
+    if (["input", "textarea"].includes(document.activeElement.tagName.toLowerCase())) {
+      return;
+    }
+
+    if (e.key.toLowerCase() === "f") {
+      if (currentLayout === "split") {
+        currentLayout = "qp-only";
+        paneQP.classList.add("fullscreen-pane");
+        paneSOL.classList.add("hidden-pane");
+        centerDivider.style.display = "none";
+      } else if (currentLayout === "qp-only") {
+        currentLayout = "sol-only";
+        paneQP.classList.remove("fullscreen-pane");
+        paneQP.classList.add("hidden-pane");
+        paneSOL.classList.remove("hidden-pane");
+        paneSOL.classList.add("fullscreen-pane");
+        centerDivider.style.display = "none";
+      } else {
+        currentLayout = "split";
+        paneQP.classList.remove("hidden-pane", "fullscreen-pane");
+        paneSOL.classList.remove("hidden-pane", "fullscreen-pane");
+        centerDivider.style.display = "block";
+      }
+      return;
+    }
+
+    if (e.key === "[" || e.key === "ArrowLeft") {
+      cycleSession(-1);
+    } else if (e.key === "]" || e.key === "ArrowRight") {
+      cycleSession(1);
+    }
+  });
+}
+
+function cycleSession(direction) {
+  const chips = Array.from(sessionBar.querySelectorAll(".month-chip"));
+  if (chips.length === 0) return;
+  const activeIdx = chips.findIndex(c => c.classList.contains("active"));
+  let nextIdx = activeIdx + direction;
+  if (nextIdx >= 0 && nextIdx < chips.length) {
+    chips[nextIdx].click();
+  }
+}
+
+// Board Switchers
+btnIAI.addEventListener("click", () => {
+  if (currentBoard !== "IAI") {
+    currentBoard = "IAI";
+    btnIAI.classList.add("active");
+    btnIFOA.classList.remove("active");
+    populateSubjects();
+  }
+});
+
+btnIFOA.addEventListener("click", () => {
+  if (currentBoard !== "IFOA") {
+    currentBoard = "IFOA";
+    btnIFOA.classList.add("active");
+    btnIAI.classList.remove("active");
+    populateSubjects();
+  }
+});
+
+init();

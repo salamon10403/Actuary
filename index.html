@@ -3,71 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Actuarial Hub</title>
+  <title>Actuarial Past Papers Hub</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-  <!-- Edge-to-Edge Panes -->
-  <main class="split-viewport">
-    <!-- Left Pane: Solutions -->
-    <div class="doc-pane" id="leftPaneContainer">
-      <span class="pane-tag-pill">SOLUTIONS</span>
-      <iframe id="leftFrame" class="doc-frame" title="Solutions Viewer"></iframe>
-      <div id="leftEmptyNotice" class="pane-empty-msg">
-        <span>No Solution Loaded</span>
+  <!-- Precision Top Header Bar -->
+  <header class="top-nav">
+    <div class="nav-controls">
+      <!-- Board Switcher -->
+      <div class="board-toggle-group" role="group" aria-label="Actuarial Board">
+        <button type="button" class="board-btn active" id="btnIAI">IAI</button>
+        <button type="button" class="board-btn" id="btnIFOA">IFOA</button>
       </div>
+
+      <div class="v-divider"></div>
+
+      <!-- Custom Subject Dropdown -->
+      <div class="custom-dropdown" id="subjectDropdown">
+        <button type="button" class="dropdown-trigger" id="dropdownTrigger" aria-label="Select Subject">
+          <span id="selectedSubject">CA1</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu"></div>
+      </div>
+
+      <div class="v-divider"></div>
+
+      <!-- Subject Progress Pill -->
+      <div class="progress-pill" id="progressPill" title="Double-click or right-click any month pill to mark solved">
+        <span class="progress-dot"></span>
+        <span id="progressText">0 / 0 Solved</span>
+      </div>
+
+      <div class="v-divider"></div>
+
+      <!-- Scratchpad Toggle -->
+      <button type="button" class="tool-icon-btn" id="btnToggleNotes" title="Session Notes & Scratchpad">✎ Notes</button>
+
+      <div class="v-divider"></div>
     </div>
 
-    <!-- Right Pane: Questions -->
-    <div class="doc-pane" id="rightPaneContainer">
-      <span class="pane-tag-pill">QUESTIONS</span>
-      <iframe id="rightFrame" class="doc-frame" title="Questions Viewer"></iframe>
-      <div id="rightEmptyNotice" class="pane-empty-msg">
-        <span>No Question Paper Loaded</span>
+    <!-- Grouped Session Pills Bar -->
+    <div id="sessionBar" class="session-bar-scroll" tabindex="0" aria-label="Exam Sessions"></div>
+  </header>
+
+  <!-- Side-by-Side Dual Viewport -->
+  <main class="viewer-container" id="viewContainer">
+    <!-- Left Pane: Question Paper -->
+    <section class="pane left-pane" id="paneQP">
+      <div class="pane-action-bar">
+        <span class="pane-badge">QUESTION</span>
+        <button type="button" class="pane-tool-btn" id="btnPopoutQP" title="Open in New Window">↗</button>
+        <button type="button" class="pane-tool-btn" id="btnDownloadQP" title="Download Question Paper">↓</button>
       </div>
-    </div>
+      <iframe id="qpFrame" src="" title="Question Paper"></iframe>
+      <div id="qpEmpty" class="empty-state">No Question Paper Loaded</div>
+    </section>
+
+    <div class="divider" id="centerDivider"></div>
+
+    <!-- Right Pane: Solution Paper with Blind-Solve Masking -->
+    <section class="pane right-pane" id="paneSOL">
+      <div class="pane-action-bar">
+        <span class="pane-badge">SOLUTION</span>
+        <button type="button" class="pane-tool-btn" id="btnToggleBlind" title="Conceal/Reveal Solution">👁 Reveal</button>
+        <button type="button" class="pane-tool-btn" id="btnPopoutSOL" title="Open in New Window">↗</button>
+        <button type="button" class="pane-tool-btn" id="btnDownloadSOL" title="Download Solution Paper">↓</button>
+      </div>
+
+      <!-- Blind Solve Overlay -->
+      <div id="blindMask" class="blind-mask">
+        <div class="blind-card">
+          <div class="blind-icon">🔒</div>
+          <div class="blind-title">Active Practice Mode</div>
+          <div class="blind-desc">Structure your assumptions and write your bullet points first. Real learning happens before looking at model answers.</div>
+          <div class="blind-reassurance">
+            "Model solutions are written by examiner panels with unlimited time. You don't need their exact phrasing—you need sound principles and clear structure."
+          </div>
+          <button type="button" class="blind-reveal-btn" id="btnRevealSolution">Reveal Indicative Solution</button>
+        </div>
+      </div>
+
+      <iframe id="solFrame" src="" title="Solution Paper"></iframe>
+      <div id="solEmpty" class="empty-state">No Solution Loaded</div>
+    </section>
   </main>
 
-  <!-- Movable 4-Button Dock -->
-  <div class="draggable-dock" id="movableDock">
-    <div class="drag-grip" id="dragGrip" title="Drag to move">⠿</div>
-
-    <!-- Button 1: Board (IAI / IFOA) -->
-    <div class="dock-btn-wrapper">
-      <button class="dock-round-btn" id="boardToggleBtn" type="button" title="Select Board">
-        <span id="dockBoardLabel">IAI</span>
-      </button>
-      <div class="dock-popover" id="boardPopover">
-        <div class="dock-popover-item active" data-board="IAI">IAI</div>
-        <div class="dock-popover-item" data-board="IFOA">IFOA</div>
-      </div>
+  <!-- Slide-out Drawer: Actuarial Scratchpad & Rubric Notes -->
+  <aside id="notesDrawer" class="drawer hidden-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title" id="notesTitle">Session Scratchpad</span>
+      <button type="button" class="drawer-close-btn" id="btnCloseNotes">✕</button>
     </div>
-
-    <!-- Button 2: Subject (SUB) -->
-    <div class="dock-btn-wrapper">
-      <button class="dock-round-btn accent-blue" id="subjectToggleBtn" type="button" title="Select Subject">
-        <span id="dockSubjectLabel">SUB</span>
-      </button>
-      <div class="dock-popover scrollable-popover" id="subjectPopover"></div>
+    <div class="drawer-body">
+      <textarea id="sessionNotes" placeholder="Jot down assumptions, formula derivations, rubric checks, or your mark breakdown for this paper... (Auto-saved locally)"></textarea>
     </div>
-
-    <!-- Button 3: Year -->
-    <div class="dock-btn-wrapper">
-      <button class="dock-round-btn" id="yearToggleBtn" type="button" title="Select Year">
-        <span id="dockYearLabel">YEAR</span>
-      </button>
-      <div class="dock-popover scrollable-popover" id="yearPopover"></div>
-    </div>
-
-    <!-- Button 4: Month -->
-    <div class="dock-btn-wrapper">
-      <button class="dock-round-btn" id="monthToggleBtn" type="button" title="Select Month">
-        <span id="dockMonthLabel">MONTH</span>
-      </button>
-      <div class="dock-popover scrollable-popover" id="monthPopover"></div>
-    </div>
-  </div>
+  </aside>
 
   <script src="./script.js"></script>
 </body>
