@@ -92,7 +92,7 @@ async function init() {
     console.error("Could not load iai_papers.json:", err);
   }
 
-  // Restore saved state if exists
+  // Restore saved state if available
   const saved = loadSavedState();
   if (saved && saved.board) {
     currentBoard = saved.board;
@@ -147,7 +147,6 @@ function setupMobileTabs() {
   tabMobileQP.addEventListener("click", () => switchMobileTab("qp"));
   tabMobileSOL.addEventListener("click", () => switchMobileTab("sol"));
 
-  // Apply initial mobile view
   switchMobileTab(activeMobileTab);
 }
 
@@ -259,7 +258,6 @@ function renderSessionBar() {
   const sortedYears = Object.keys(groups).sort((a, b) => b - a);
 
   if (sortedYears.length > 0) {
-    // If saved year/month don't match this subject, pick the latest
     if (!currentYear || !groups[currentYear] || !groups[currentYear].has(currentMonth)) {
       currentYear = sortedYears[0];
       const sortedMonths = Array.from(groups[currentYear]).sort(
@@ -301,7 +299,7 @@ function renderSessionBar() {
         setTimeout(() => chip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }), 50);
       }
 
-      // Tap / Click to select session
+      // Tap to load
       chip.addEventListener("click", () => {
         currentYear = year;
         currentMonth = month;
@@ -310,7 +308,7 @@ function renderSessionBar() {
         saveCurrentState();
       });
 
-      // Double-tap or right click marks conquered
+      // Double-click or right-click to mark conquered
       chip.addEventListener("dblclick", (e) => {
         e.preventDefault();
         togglePaperConquered(year, month);
@@ -343,6 +341,27 @@ function getCurrentPaper() {
   );
 }
 
+// ----------------------------------------------------
+// PDF Viewer URL Helper (Mobile vs Desktop)
+// ----------------------------------------------------
+function getPdfViewerUrl(rawPdfUrl) {
+  if (!rawPdfUrl) return "";
+
+  // Make relative path absolute for external readers
+  const absolutePdfUrl = new URL(rawPdfUrl, window.location.href).href;
+
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+                   || window.innerWidth <= 768;
+
+  if (isMobile) {
+    // Render PDF inline on mobile via Mozilla PDF.js (prevents forced download prompts)
+    return `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(absolutePdfUrl)}`;
+  } else {
+    // Native browser viewer on desktop
+    return `${rawPdfUrl}#toolbar=0&navpanes=0`;
+  }
+}
+
 function loadViewer() {
   const paper = getCurrentPaper();
 
@@ -351,7 +370,7 @@ function loadViewer() {
   btnToggleBlind.textContent = "👁 Reveal";
 
   if (paper && paper.questionUrl) {
-    qpFrame.src = `${paper.questionUrl}#toolbar=0&navpanes=0`;
+    qpFrame.src = getPdfViewerUrl(paper.questionUrl);
     qpEmpty.style.display = "none";
   } else {
     qpFrame.src = "";
@@ -359,7 +378,7 @@ function loadViewer() {
   }
 
   if (paper && paper.solutionUrl) {
-    solFrame.src = `${paper.solutionUrl}#toolbar=0&navpanes=0`;
+    solFrame.src = getPdfViewerUrl(paper.solutionUrl);
     solEmpty.style.display = "none";
   } else {
     solFrame.src = "";
@@ -375,7 +394,7 @@ function clearViewports() {
 }
 
 // ----------------------------------------------------
-// Drawers & Utilities
+// Drawers & File Actions
 // ----------------------------------------------------
 function setupDrawersAndTools() {
   btnRevealSolution.addEventListener("click", () => {
