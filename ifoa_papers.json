@@ -1,0 +1,26 @@
+[
+  {
+    "board": "IFOA",
+    "subjectCode": "CM1A",
+    "year": "2024",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IFOA_CM1A_2024_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IFOA_CM1A_2024_Sep_Sol.pdf"
+  },
+  {
+    "board": "IFOA",
+    "subjectCode": "CM1A",
+    "year": "2024",
+    "month": "Apr",
+    "questionUrl": "./pdfs/IFOA_CM1A_2024_Apr_QP.pdf",
+    "solutionUrl": "./pdfs/IFOA_CM1A_2024_Apr_Sol.pdf"
+  },
+  {
+    "board": "IFOA",
+    "subjectCode": "CM1B",
+    "year": "2024",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IFOA_CM1B_2024_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IFOA_CM1B_2024_Sep_Sol.pdf"
+  }
+]

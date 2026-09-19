@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actuarial Hub</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Edge-to-Edge Panes -->
+  <main class="split-viewport">
+    <!-- Left Pane: Solutions -->
+    <div class="doc-pane" id="leftPaneContainer">
+      <span class="pane-tag-pill">SOLUTIONS</span>
+      <iframe id="leftFrame" class="doc-frame" title="Solutions Viewer"></iframe>
+      <div id="leftEmptyNotice" class="pane-empty-msg">
+        <span>No Solution Loaded</span>
+      </div>
+    </div>
+
+    <!-- Right Pane: Questions -->
+    <div class="doc-pane" id="rightPaneContainer">
+      <span class="pane-tag-pill">QUESTIONS</span>
+      <iframe id="rightFrame" class="doc-frame" title="Questions Viewer"></iframe>
+      <div id="rightEmptyNotice" class="pane-empty-msg">
+        <span>No Question Paper Loaded</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Movable 4-Button Dock -->
+  <div class="draggable-dock" id="movableDock">
+    <div class="drag-grip" id="dragGrip" title="Drag to move">⠿</div>
+
+    <!-- Button 1: Board (IAI / IFOA) -->
+    <div class="dock-btn-wrapper">
+      <button class="dock-round-btn" id="boardToggleBtn" type="button" title="Select Board">
+        <span id="dockBoardLabel">IAI</span>
+      </button>
+      <div class="dock-popover" id="boardPopover">
+        <div class="dock-popover-item active" data-board="IAI">IAI</div>
+        <div class="dock-popover-item" data-board="IFOA">IFOA</div>
+      </div>
+    </div>
+
+    <!-- Button 2: Subject (SUB) -->
+    <div class="dock-btn-wrapper">
+      <button class="dock-round-btn accent-blue" id="subjectToggleBtn" type="button" title="Select Subject">
+        <span id="dockSubjectLabel">SUB</span>
+      </button>
+      <div class="dock-popover scrollable-popover" id="subjectPopover"></div>
+    </div>
+
+    <!-- Button 3: Year -->
+    <div class="dock-btn-wrapper">
+      <button class="dock-round-btn" id="yearToggleBtn" type="button" title="Select Year">
+        <span id="dockYearLabel">YEAR</span>
+      </button>
+      <div class="dock-popover scrollable-popover" id="yearPopover"></div>
+    </div>
+
+    <!-- Button 4: Month -->
+    <div class="dock-btn-wrapper">
+      <button class="dock-round-btn" id="monthToggleBtn" type="button" title="Select Month">
+        <span id="dockMonthLabel">MONTH</span>
+      </button>
+      <div class="dock-popover scrollable-popover" id="monthPopover"></div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

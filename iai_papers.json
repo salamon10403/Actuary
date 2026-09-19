@@ -1,0 +1,2282 @@
+[
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB1_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CB1_2025_Feb_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB1_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB1_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB1_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB1_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB1_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB1_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CB1_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CB1_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CB1_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CB1_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CB1_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB1_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CB1_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB1",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB1_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB1_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB2_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CB2_2025_Feb_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB2_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB2_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB2_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB2_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB2_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB2_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CB2_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CB2_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CB2_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CB2_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CB2_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB2_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CB2_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB2",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB2_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB2_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB3",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB3_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB3",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CB3_2025_Feb_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB3_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB3",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CB3_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB3_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB3",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB3_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB3_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CB3",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CB3_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CB3_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1A_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CM1A_2025_Feb_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1A_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1A_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1A_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1A_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1A_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1A_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CM1A_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CM1A_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM1A_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM1A_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CM1A_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1A_2020_Nov_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CM1A_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1A",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1A_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM1A_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1B_2026_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CM1B_2025_Feb_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1B_2025_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1B_2025_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1B_2024_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1B_2024_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM1B_2023_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1B_2023_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CM1B_2022_Dec_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CM1B_2022_Jul_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM1B_2022_Mar_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM1B_2021_Mar_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CM1B_2021_Sep_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1B_2020_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CM1B_2019_Jun_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM1B",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM1B_2019_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2A_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CM2A_2025_Feb_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2A_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2A_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2A_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2A_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2A_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2A_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CM2A_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CM2A_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM2A_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM2A_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CM2A_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2A_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CM2A_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2A",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2A_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CM2A_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2B_2026_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CM2B_2025_Feb_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2B_2025_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2B_2025_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2B_2024_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2B_2024_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CM2B_2023_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2B_2023_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CM2B_2022_Dec_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CM2B_2022_Jul_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM2B_2022_Mar_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CM2B_2021_Mar_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CM2B_2021_Sep_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2B_2020_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CM2B_2019_Jun_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CM2B",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CM2B_2019_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1A_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1A_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1A_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1A_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1A_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1A_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1A_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CP1A_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CP1A_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP1A_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP1A_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CP1A_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1A_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CP1A_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1A",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1A_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1A_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1B_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1B_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1B_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1B_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1B_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP1B_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1B_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CP1B_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CP1B_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP1B_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP1B_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CP1B_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1B_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CP1B_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP1B",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP1B_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP1B_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2A_2026_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2A_2025_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2A_2025_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2A_2024_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2A_2024_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2A_2023_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2A_2023_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CP2A_2022_Dec_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CP2A_2022_Jul_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP2A_2022_Mar_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP2A_2021_Mar_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CP2A_2021_Sep_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2A_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP2A_2020_Nov_Sol.zip"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CP2A_2019_Jun_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2A",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2A_2019_Nov_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2B_2026_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2B_2025_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2B_2025_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2B_2024_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2B_2024_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP2B_2023_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2B_2023_Nov_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CP2B_2022_Dec_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CP2B_2022_Jul_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP2B_2022_Mar_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP2B_2021_Mar_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CP2B_2021_Mar_Sol.zip"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CP2B_2021_Sep_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CP2B_2021_Sep_Sol.zip"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2B_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP2B_2020_Nov_Sol.zip"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CP2B_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP2B_2019_Jun_Sol.zip"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP2B",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP2B_2019_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CP2B_2019_Nov_Sol.zip"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP3_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP3_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP3_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP3_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP3_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CP3_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP3_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CP3_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CP3_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP3_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CP3_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CP3_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP3_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CP3_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CP3",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CP3_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CP3_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1A_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CS1A_2025_Feb_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1A_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1A_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1A_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1A_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1A_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1A_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CS1A_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CS1A_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS1A_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS1A_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CS1A_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1A_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CS1A_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1A",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1A_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1A_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1B_2026_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CS1B_2025_Feb_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1B_2025_May_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1B_2025_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1B_2024_May_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1B_2024_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS1B_2023_May_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1B_2023_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "",
+    "solutionUrl": "./pdfs/IAI_CS1B_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CS1B_2022_Jul_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS1B_2022_Mar_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS1B_2021_Mar_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CS1B_2021_Sep_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1B_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1B_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CS1B_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS1B_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS1B",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS1B_2019_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS1B_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2A_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CS2A_2025_Feb_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2A_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2A_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2A_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2A_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2A_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2A_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_CS2A_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CS2A_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS2A_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS2A_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CS2A_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2A_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CS2A_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2A",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2A_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2A_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2B_2026_May_QP.zip",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2025",
+    "month": "Feb",
+    "questionUrl": "./pdfs/IAI_CS2B_2025_Feb_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2025_Feb_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2B_2025_May_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2B_2025_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2B_2024_May_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2B_2024_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_CS2B_2023_May_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2B_2023_Nov_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "",
+    "solutionUrl": "./pdfs/IAI_CS2B_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_CS2B_2022_Jul_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS2B_2022_Mar_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_CS2B_2021_Mar_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_CS2B_2021_Sep_QP.zip",
+    "solutionUrl": "./pdfs/IAI_CS2B_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2B_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2B_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_CS2B_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2B_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "CS2B",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_CS2B_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_CS2B_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP1_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP1_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP1_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP1_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP1_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP1_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP1_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_SP1_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_SP1_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_SP1_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_SP1_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_SP1_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP1_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_SP1_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP1",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP1_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP1_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP2_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP2_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP2_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP2_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP2_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP2_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP2_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_SP2_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_SP2_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_SP2_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_SP2_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_SP2_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP2_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_SP2_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP2",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP2_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP2_2019_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2026",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP4_2026_May_QP.pdf",
+    "solutionUrl": ""
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2025",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP4_2025_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2025_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2025",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP4_2025_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2025_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2024",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP4_2024_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2024_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2024",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP4_2024_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2024_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2023",
+    "month": "May",
+    "questionUrl": "./pdfs/IAI_SP4_2023_May_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2023_May_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2023",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP4_2023_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2023_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2022",
+    "month": "Dec",
+    "questionUrl": "./pdfs/IAI_SP4_2022_Dec_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2022_Dec_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2022",
+    "month": "Jul",
+    "questionUrl": "./pdfs/IAI_SP4_2022_Jul_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2022_Jul_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2022",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_SP4_2022_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2022_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2021",
+    "month": "Mar",
+    "questionUrl": "./pdfs/IAI_SP4_2021_Mar_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2021_Mar_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2021",
+    "month": "Sep",
+    "questionUrl": "./pdfs/IAI_SP4_2021_Sep_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2021_Sep_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2020",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP4_2020_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2020_Nov_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2019",
+    "month": "Jun",
+    "questionUrl": "./pdfs/IAI_SP4_2019_Jun_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2019_Jun_Sol.pdf"
+  },
+  {
+    "board": "IAI",
+    "subjectCode": "SP4",
+    "year": "2019",
+    "month": "Nov",
+    "questionUrl": "./pdfs/IAI_SP4_2019_Nov_QP.pdf",
+    "solutionUrl": "./pdfs/IAI_SP4_2019_Nov_Sol.pdf"
+  }
+]

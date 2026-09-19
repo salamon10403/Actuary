@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1a1d20;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #e6edf3;
+  user-select: none;
+}
+
+/* Document Viewport */
+.split-viewport {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.doc-pane {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #21262d;
+  border-right: 1px solid #30363d;
+  overflow: hidden;
+}
+
+.doc-pane:last-child {
+  border-right: none;
+}
+
+.pane-tag-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(8px);
+  color: #58a6ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.doc-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: none;
+  background-color: #ffffff;
+}
+
+.pane-empty-msg {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: #8b949e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Movable Dock */
+.draggable-dock {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background: rgba(22, 27, 34, 0.92);
+  backdrop-filter: blur(16px);
+  padding: 6px 10px;
+  border-radius: 36px;
+  border: 1px solid #30363d;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  z-index: 30;
+}
+
+.drag-grip {
+  cursor: grab;
+  color: #6e7681;
+  padding: 0 6px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.drag-grip:active {
+  cursor: grabbing;
+}
+
+.dock-btn-wrapper {
+  position: relative;
+  margin: 0 3px;
+}
+
+.dock-round-btn {
+  min-width: 48px;
+  height: 44px;
+  padding: 0 10px;
+  border-radius: 22px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.dock-round-btn:hover {
+  background: #30363d;
+  border-color: #58a6ff;
+}
+
+.dock-round-btn.accent-blue span {
+  color: #58a6ff;
+}
+
+/* Popovers matching the screenshot style */
+.dock-popover {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  z-index: 35;
+  min-width: 80px;
+}
+
+.dock-popover.show {
+  display: flex;
+}
+
+.dock-popover.scrollable-popover {
+  max-height: 220px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.dock-popover-item {
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #c9d1d9;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.12s ease;
+}
+
+.dock-popover-item:hover {
+  background: #21262d;
+}
+
+.dock-popover-item.active {
+  background: #1f6feb;
+  color: #ffffff;
+  font-weight: 700;
+}
