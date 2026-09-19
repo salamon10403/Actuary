@@ -7,7 +7,9 @@ let currentMonth = "";
 // State
 let currentLayout = "split";
 let blindSolveActive = true;
+let activeMobileTab = "qp"; // 'qp' or 'sol'
 
+const STORAGE_STATE_KEY = "actuary_hub_saved_session_state";
 const MONTH_ORDER = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 // DOM Elements
@@ -28,6 +30,10 @@ const dropdownMenu = document.getElementById("dropdownMenu");
 const progressText = document.getElementById("progressText");
 const sessionBar = document.getElementById("sessionBar");
 
+// Mobile Elements
+const tabMobileQP = document.getElementById("tabMobileQP");
+const tabMobileSOL = document.getElementById("tabMobileSOL");
+
 // Blind Solve
 const blindMask = document.getElementById("blindMask");
 const btnToggleBlind = document.getElementById("btnToggleBlind");
@@ -46,7 +52,32 @@ const btnDownloadQP = document.getElementById("btnDownloadQP");
 const btnPopoutSOL = document.getElementById("btnPopoutSOL");
 const btnDownloadSOL = document.getElementById("btnDownloadSOL");
 
-// Initialize Application
+// ----------------------------------------------------
+// Persistent State Management
+// ----------------------------------------------------
+function saveCurrentState() {
+  const state = {
+    board: currentBoard,
+    subject: currentSubject,
+    year: currentYear,
+    month: currentMonth,
+    mobileTab: activeMobileTab
+  };
+  localStorage.setItem(STORAGE_STATE_KEY, JSON.stringify(state));
+}
+
+function loadSavedState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_STATE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+// ----------------------------------------------------
+// Application Initialization
+// ----------------------------------------------------
 async function init() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./sw.js").catch(() => {});
@@ -61,6 +92,26 @@ async function init() {
     console.error("Could not load iai_papers.json:", err);
   }
 
+  // Restore saved state if exists
+  const saved = loadSavedState();
+  if (saved && saved.board) {
+    currentBoard = saved.board;
+    currentSubject = saved.subject || "";
+    currentYear = saved.year || "";
+    currentMonth = saved.month || "";
+    if (saved.mobileTab) activeMobileTab = saved.mobileTab;
+  }
+
+  // Sync Board buttons
+  if (currentBoard === "IFOA") {
+    btnIFOA.classList.add("active");
+    btnIAI.classList.remove("active");
+  } else {
+    btnIAI.classList.add("active");
+    btnIFOA.classList.remove("active");
+  }
+
+  // Session Bar Wheel Scroll
   sessionBar.addEventListener("wheel", (e) => {
     if (e.deltaY !== 0) {
       e.preventDefault();
@@ -68,12 +119,41 @@ async function init() {
     }
   }, { passive: false });
 
+  setupMobileTabs();
   populateSubjects();
-  setupKeyboardEngine();
   setupDrawersAndTools();
 }
 
+// ----------------------------------------------------
+// Mobile Phone Tabs Switching Logic
+// ----------------------------------------------------
+function setupMobileTabs() {
+  function switchMobileTab(target) {
+    activeMobileTab = target;
+    if (target === "qp") {
+      tabMobileQP.classList.add("active");
+      tabMobileSOL.classList.remove("active");
+      paneQP.classList.add("active-mobile-pane");
+      paneSOL.classList.remove("active-mobile-pane");
+    } else {
+      tabMobileSOL.classList.add("active");
+      tabMobileQP.classList.remove("active");
+      paneSOL.classList.add("active-mobile-pane");
+      paneQP.classList.remove("active-mobile-pane");
+    }
+    saveCurrentState();
+  }
+
+  tabMobileQP.addEventListener("click", () => switchMobileTab("qp"));
+  tabMobileSOL.addEventListener("click", () => switchMobileTab("sol"));
+
+  // Apply initial mobile view
+  switchMobileTab(activeMobileTab);
+}
+
+// ----------------------------------------------------
 // Subject Dropdown
+// ----------------------------------------------------
 dropdownTrigger.addEventListener("click", (e) => {
   e.stopPropagation();
   dropdownMenu.classList.toggle("open");
@@ -107,13 +187,14 @@ function populateSubjects() {
       item.classList.add("active");
 
       renderSessionBar();
+      saveCurrentState();
     });
 
     dropdownMenu.appendChild(item);
   });
 
   if (subjects.length > 0) {
-    if (!subjects.includes(currentSubject)) {
+    if (!currentSubject || !subjects.includes(currentSubject)) {
       currentSubject = subjects[0];
     }
     selectedSubjectSpan.textContent = currentSubject;
@@ -126,7 +207,9 @@ function populateSubjects() {
   }
 }
 
+// ----------------------------------------------------
 // Conquered Papers Tracker Logic
+// ----------------------------------------------------
 function getConqueredStorageKey() {
   return `conquered_${currentBoard}_${currentSubject}`;
 }
@@ -157,6 +240,9 @@ function updateProgressBadge() {
   progressText.textContent = `${solved} / ${total} Solved (${pct}%)`;
 }
 
+// ----------------------------------------------------
+// Session Pills Rendering
+// ----------------------------------------------------
 function renderSessionBar() {
   sessionBar.innerHTML = "";
 
@@ -173,7 +259,8 @@ function renderSessionBar() {
   const sortedYears = Object.keys(groups).sort((a, b) => b - a);
 
   if (sortedYears.length > 0) {
-    if (!currentYear || !groups[currentYear]) {
+    // If saved year/month don't match this subject, pick the latest
+    if (!currentYear || !groups[currentYear] || !groups[currentYear].has(currentMonth)) {
       currentYear = sortedYears[0];
       const sortedMonths = Array.from(groups[currentYear]).sort(
         (a, b) => MONTH_ORDER.indexOf(b) - MONTH_ORDER.indexOf(a)
@@ -208,19 +295,22 @@ function renderSessionBar() {
         chip.classList.add("conquered");
       }
 
-      if (String(currentYear) === String(year) && currentMonth.toLowerCase() === month.toLowerCase()) {
+      const isActive = String(currentYear) === String(year) && currentMonth.toLowerCase() === month.toLowerCase();
+      if (isActive) {
         chip.classList.add("active");
+        setTimeout(() => chip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }), 50);
       }
 
+      // Tap / Click to select session
       chip.addEventListener("click", () => {
         currentYear = year;
         currentMonth = month;
         renderSessionBar();
         loadViewer();
-        chip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        saveCurrentState();
       });
 
-      // Double-click or right-click to mark as solved/conquered
+      // Double-tap or right click marks conquered
       chip.addEventListener("dblclick", (e) => {
         e.preventDefault();
         togglePaperConquered(year, month);
@@ -241,6 +331,7 @@ function renderSessionBar() {
   updateProgressBadge();
   loadViewer();
   loadSavedNotes();
+  saveCurrentState();
 }
 
 function getCurrentPaper() {
@@ -283,7 +374,9 @@ function clearViewports() {
   solEmpty.style.display = "flex";
 }
 
-// Drawers & Study Utilities
+// ----------------------------------------------------
+// Drawers & Utilities
+// ----------------------------------------------------
 function setupDrawersAndTools() {
   btnRevealSolution.addEventListener("click", () => {
     blindSolveActive = false;
@@ -356,65 +449,16 @@ function loadSavedNotes() {
   sessionNotes.value = localStorage.getItem(key) || "";
 }
 
-// Keyboard Shortcuts Engine
-function setupKeyboardEngine() {
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      notesDrawer.classList.add("hidden-drawer");
-      return;
-    }
-
-    if (["input", "textarea"].includes(document.activeElement.tagName.toLowerCase())) {
-      return;
-    }
-
-    if (e.key.toLowerCase() === "f") {
-      if (currentLayout === "split") {
-        currentLayout = "qp-only";
-        paneQP.classList.add("fullscreen-pane");
-        paneSOL.classList.add("hidden-pane");
-        centerDivider.style.display = "none";
-      } else if (currentLayout === "qp-only") {
-        currentLayout = "sol-only";
-        paneQP.classList.remove("fullscreen-pane");
-        paneQP.classList.add("hidden-pane");
-        paneSOL.classList.remove("hidden-pane");
-        paneSOL.classList.add("fullscreen-pane");
-        centerDivider.style.display = "none";
-      } else {
-        currentLayout = "split";
-        paneQP.classList.remove("hidden-pane", "fullscreen-pane");
-        paneSOL.classList.remove("hidden-pane", "fullscreen-pane");
-        centerDivider.style.display = "block";
-      }
-      return;
-    }
-
-    if (e.key === "[" || e.key === "ArrowLeft") {
-      cycleSession(-1);
-    } else if (e.key === "]" || e.key === "ArrowRight") {
-      cycleSession(1);
-    }
-  });
-}
-
-function cycleSession(direction) {
-  const chips = Array.from(sessionBar.querySelectorAll(".month-chip"));
-  if (chips.length === 0) return;
-  const activeIdx = chips.findIndex(c => c.classList.contains("active"));
-  let nextIdx = activeIdx + direction;
-  if (nextIdx >= 0 && nextIdx < chips.length) {
-    chips[nextIdx].click();
-  }
-}
-
+// ----------------------------------------------------
 // Board Switchers
+// ----------------------------------------------------
 btnIAI.addEventListener("click", () => {
   if (currentBoard !== "IAI") {
     currentBoard = "IAI";
     btnIAI.classList.add("active");
     btnIFOA.classList.remove("active");
     populateSubjects();
+    saveCurrentState();
   }
 });
 
@@ -424,6 +468,7 @@ btnIFOA.addEventListener("click", () => {
     btnIFOA.classList.add("active");
     btnIAI.classList.remove("active");
     populateSubjects();
+    saveCurrentState();
   }
 });
 

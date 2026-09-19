@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Actuarial Past Papers Hub</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
@@ -31,7 +31,7 @@
       <div class="v-divider"></div>
 
       <!-- Subject Progress Pill -->
-      <div class="progress-pill" id="progressPill" title="Double-click or right-click any month pill to mark solved">
+      <div class="progress-pill" id="progressPill" title="Double-click or tap to mark solved">
         <span class="progress-dot"></span>
         <span id="progressText">0 / 0 Solved</span>
       </div>
@@ -48,10 +48,16 @@
     <div id="sessionBar" class="session-bar-scroll" tabindex="0" aria-label="Exam Sessions"></div>
   </header>
 
-  <!-- Side-by-Side Dual Viewport -->
+  <!-- Mobile Document Switcher (Visible only on phone screens) -->
+  <nav class="mobile-doc-tabs" id="mobileDocTabs">
+    <button type="button" class="mobile-tab-btn active" id="tabMobileQP">Question Paper</button>
+    <button type="button" class="mobile-tab-btn" id="tabMobileSOL">Solution Paper</button>
+  </nav>
+
+  <!-- Side-by-Side Viewport on Desktop / Full Screen Tabbed on Phone -->
   <main class="viewer-container" id="viewContainer">
     <!-- Left Pane: Question Paper -->
-    <section class="pane left-pane" id="paneQP">
+    <section class="pane left-pane active-mobile-pane" id="paneQP">
       <div class="pane-action-bar">
         <span class="pane-badge">QUESTION</span>
         <button type="button" class="pane-tool-btn" id="btnPopoutQP" title="Open in New Window">↗</button>
@@ -77,9 +83,9 @@
         <div class="blind-card">
           <div class="blind-icon">🔒</div>
           <div class="blind-title">Active Practice Mode</div>
-          <div class="blind-desc">Structure your assumptions and write your bullet points first. Real learning happens before looking at model answers.</div>
+          <div class="blind-desc">Structure your assumptions and outline points before reviewing solutions.</div>
           <div class="blind-reassurance">
-            "Model solutions are written by examiner panels with unlimited time. You don't need their exact phrasing—you need sound principles and clear structure."
+            "Model solutions are written by examiner panels with unlimited time. Focus on core actuarial principles."
           </div>
           <button type="button" class="blind-reveal-btn" id="btnRevealSolution">Reveal Indicative Solution</button>
         </div>
@@ -90,14 +96,14 @@
     </section>
   </main>
 
-  <!-- Slide-out Drawer: Actuarial Scratchpad & Rubric Notes -->
+  <!-- Slide-out Drawer: Scratchpad & Rubric Notes -->
   <aside id="notesDrawer" class="drawer hidden-drawer">
     <div class="drawer-header">
       <span class="drawer-title" id="notesTitle">Session Scratchpad</span>
       <button type="button" class="drawer-close-btn" id="btnCloseNotes">✕</button>
     </div>
     <div class="drawer-body">
-      <textarea id="sessionNotes" placeholder="Jot down assumptions, formula derivations, rubric checks, or your mark breakdown for this paper... (Auto-saved locally)"></textarea>
+      <textarea id="sessionNotes" placeholder="Jot down assumptions, formula derivations, rubric checks, or mark breakdown... (Auto-saved)"></textarea>
     </div>
   </aside>
 
